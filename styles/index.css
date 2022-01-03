@@ -1,6 +1,7 @@
 body{
+    color:#2b2b2b;
     font-family: 'Montserrat', 'Arial', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight:400;
 }
@@ -8,7 +9,7 @@ body{
     font-weight: 200;
 }
 b, strong .bold-text{
-    font-weight:800;
+    font-weight:600;
 }
 .center-text{
     text-align: center;
@@ -18,11 +19,16 @@ nav ul{
 }
 a{
     --link-color:var(--primary);
+    --hover-color:white;
     color:var(--link-color);
     text-decoration: none;
     position: relative;
     z-index: 1;
     transition: .15s ease-in-out all;
+}
+a.alt{
+    --link-color:white;
+    --hover-color:var(--primary)
 }
 a::before{
     padding:0 2px;
@@ -39,10 +45,54 @@ a::before{
 }
 a:hover{
     cursor: pointer;
-    color:white;
+    color:var(--hover-color);
     transition: .15s ease-in-out all;
 }
 a:hover::before{
     height:calc(100% + 2px);
     transition: .15s ease-in-out all;
 }
+h1,h2,h3, h4{
+    width:100%;
+}
+main{
+    max-width: 1200px;
+    width:90%;
+    padding:0 5%;
+    margin:calc(var(--spacer) * 2) auto;
+}
+section{
+    margin:calc(var(--spacer) * 2) auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+section > div{
+    width: 45%;
+}
+
+/**** header *******/
+body > header{
+    background:var(--primary);
+    color:white;
+    padding:calc(.5 * var(--spacer)) var(--spacer);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    max-width: 60px;
+    width: 50%;
+}
+body > header > nav ul{
+    display:flex;
+    font-size: 1.3em;
+}
+body > header > nav ul li:not(:last-of-type){
+    margin-right:var(--spacer); 
+}
+/**** intro *******/
+/**** about *******/
+/**** experience *******/
+/**** contact *******/
+/**** footer *******/
