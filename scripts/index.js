@@ -1,1 +1,1 @@
-console.log('js loaded')
+console.log('Thanks for checking out my log.')
