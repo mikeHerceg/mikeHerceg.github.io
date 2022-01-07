@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/variables.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <title>Mike Herceg: a developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <script defer type="" src="./scripts/index.js"></script>
   </head>
   <body>
@@ -29,14 +29,14 @@
     </header>
     <main>
       <section id="about">
-        <div>
-        <h1>About Mike</h1>
-        <img src="./assets/head_shot.jpg" alt="image of mike" aria-hidden="true"/>
-        <p>My name is Mike Herceg, and I like making things. I enjoy building UIs for websites and software. I like to design layouts and user flows. I love solving problems and puzzles,  and am quick to learn new skills when the project requires it. Outside of tech I enjoy working with my hands, and challenging myself by trying new things.</p>
-      </div>
-      <div>
+        <div class="box">
+          <h1>About Mike</h1>
+          <div class="spaced-flex">
+            <img src="./assets/head_shot.jpg" alt="image of mike" aria-hidden="true" class="rounded-border"/>
+            <p>My name is Mike Herceg, and I like making things. I enjoy building UIs for websites and software. I like to design layouts and user flows. I love solving problems and puzzles,  and am quick to learn new skills when the project requires it. Outside of tech I enjoy working with my hands, and challenging myself by trying new things.</p>
+          </div>
         <h2>Skills</h2>
-        <div>
+        <div class="spaced-flex">
           <ul>
             <li>HTML</li>
             <li>CSS & SCSS</li>
@@ -59,12 +59,12 @@
           </ul>
         </div>
       </section>
-      <section id="experiences">
+      <section id="experiences" class="box">
         <h1>Work Experiences</h1>
         <article>
           <header>
-            <h3>Ikea</h3>
-            <h4>Software Engineer: November 2021 - Present</h4>
+            <h2>Ikea</h2>
+            <h3>Software Engineer: <span class="light-text"> November 2021 - Present</span></h3>
           </header>
           <div>
               <p>As a Software Engineer at IKEA, I am responsible for implementing features, refactoring existing code, and remediating bugs, in their online store’s checkout process. By collaborating with other engineers and product owners around the world, we are able to create a product that is used by all nations IKEA has a presence in. Utilizing front-end technologies, such as ReactJS, Typescript, Styled components, and design systems we are able to build out a reliable yet dynamic solution.</p>
@@ -72,22 +72,20 @@
         </article>
         <article>
           <header>
-            <h3>SofterWare</h3>
-            <h4>Fontend Developer:November 2021 - Present</h4>
+            <h2>SofterWare</h2>
+            <h3>Fontend Developer: <span class="light-text">December 2020 - November 2021</span></h3>
           </header>
           <div>
             <p>As a Front-End Developer at Softerware I was responsible for bringing our team’s designs to life within our various products. I combine the creativity and empathy of a UX Designer with the skill set of a Front-End Developer. I served as a User Interface/Front-end Developer building our UX Chapter’s designs and assisting in its integration within applications by our Product Development squads. </p>
             <p>By utilizing front-end technologies, such as ReactJS, SCSS, Webpack, and Gulp, I was able to create reusable components, with a consistent look and feel for myself and other developers to use while building new features for our client retention service, DonorPerfect.</p>
           </div>
-        </article>
-        <article>
           <header>
-            <h3>SofterWare</h3>
-            <h4>Web & Design Team Lead:November 2021 - Present</h4>
+            <h3>Web & Design Team Lead: <span class="light-text">January 2019 - December 2020</span></h3>
           </header>
           <div>
               <p>As a Web & Design Team Lead, at SofterWare, I was mainly responsible for leading large web development and design projects, for Softerware’s Marketing Sites while mentoring other team members in design and code. Outside of design and web development I was responsible for managing a team of designers and developers. I also created and implemented project management processes for the entire marketing team.</p>
           </div>
+          <h3>Senior Web & Graphic Designer <span class="light-text">January 2018 - January 2019</span></h3>
         </article>
         </div>
       </section>

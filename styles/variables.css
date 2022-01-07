@@ -1,4 +1,6 @@
 *{/* variables for site */
     --spacer:16px;
+    --spacer-large:calc(var(--spacer) * 2);
     --primary:#20ba93;
+    --black:#2b2b2b;
 }

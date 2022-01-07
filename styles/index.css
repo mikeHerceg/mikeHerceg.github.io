@@ -1,8 +1,9 @@
 body{
-    color:#2b2b2b;
+    color:var(--black);
+    background:var(--black);
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 32px;
     font-weight:400;
 }
 .light-text{
@@ -55,22 +56,45 @@ a:hover::before{
 h1,h2,h3, h4{
     width:100%;
 }
+h1{
+    font-size: 3em;
+    line-height: 1.4em;
+    margin-bottom: var(--spacer-large);
+}
+h2{
+    margin-top:var(--spacer-large);
+    color:var(--primary);
+    margin-bottom:var(--spacer);
+}
+p{
+    margin-bottom: var(--spacer);
+}
 main{
-    max-width: 1200px;
+    max-width: 900px;
     width:90%;
     padding:0 5%;
-    margin:calc(var(--spacer) * 2) auto;
+    margin:var(--spacer-large) auto;
 }
-section{
-    margin:calc(var(--spacer) * 2) auto;
+/**** reusable ***/
+.spaced-flex{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between
-}
-section > div{
-    width: 45%;
+    justify-content: space-between;
+    align-items:flex-start
 }
 
+.rounded-border{
+    border-radius:15px;
+}
+.shadow{
+    box-shadow: 0px 0px 21px 1px var(--primary);
+}
+.box{
+    box-shadow: 0px 0px 21px 1px var(--black);
+    padding:var(--spacer-large);
+    border-radius:15px;
+    background:rgba(255,255,255,.8);
+    margin-bottom:var(--spacer-large);
+}
 /**** header *******/
 body > header{
     background:var(--primary);
@@ -95,8 +119,20 @@ body > header > nav ul{
 body > header > nav ul li:not(:last-of-type){
     margin-right:var(--spacer); 
 }
-/**** intro *******/
 /**** about *******/
+#about img{
+    max-width: 220px;
+    margin-right: var(--spacer-large);
+}
 /**** experience *******/
-/**** contact *******/
+
 /**** footer *******/
+footer{
+    background: var(--primary);
+    text-align: center;
+    color:white;
+    padding:var(--spacer);
+}
+footer  a:nth-last-of-type(even){
+    margin:0 var(--spacer);
+}
