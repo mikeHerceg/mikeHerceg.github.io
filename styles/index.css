@@ -5,6 +5,7 @@ body{
     font-size: 18px;
     line-height: 32px;
     font-weight:400;
+    height:auto;
 }
 .light-text{
     font-weight: 200;
