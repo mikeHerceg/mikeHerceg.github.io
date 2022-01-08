@@ -31,5 +31,11 @@ const addEventsHandlers = () => {
     })
 }
 
+
+const generateDots = () =>{
+    const dotSizes = [ 2, 4, 6];
+    
+}
+
 addEventsHandlers();
 adjustBodyForNav();
