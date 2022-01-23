@@ -4,9 +4,12 @@ const getHeaderHeight = () => {
     return document.querySelector('.sticky-header').clientHeight;
 }
 
-
 const adjustBodyForNav = () => {
     const headerHeight =  getHeaderHeight();
+    if(headerHeight > 200){
+        return adjustBodyForNav()
+
+    }
     const main = document.getElementsByTagName('main')[0];
     main.style.marginTop = (headerHeight + 32) +'px';
 }
@@ -29,12 +32,6 @@ const addEventsHandlers = () => {
     internalLinks.forEach(link=>{
         link.addEventListener('click', e => smoothScroll(e))
     })
-}
-
-
-const generateDots = () =>{
-    const dotSizes = [ 2, 4, 6];
-    
 }
 
 addEventsHandlers();
