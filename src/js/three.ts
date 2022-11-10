@@ -1,5 +1,4 @@
 import * as Three from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export const setupThreeJS = () =>{
     // Camera & Canvas
