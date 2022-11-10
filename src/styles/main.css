@@ -1,4 +1,7 @@
-body{
+@import url('reset.css');
+@import url('variables.css');
+
+#content {
     color:var(--black);
     background:var(--black);
     font-family: 'Montserrat', 'Arial', sans-serif;
@@ -6,6 +9,10 @@ body{
     line-height: 32px;
     font-weight:400;
     height:auto;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
 }
 .light-text{
     font-weight: 200;
@@ -135,7 +142,7 @@ main{
     margin:var(--spacer-large) auto;
 }
 /**** header *******/
-body > header{
+.sticky-header{
     z-index: 2;
     background:var(--primary);
     color:white;
@@ -152,11 +159,11 @@ body > header{
     max-width: 60px;
     width: 50%;
 }
-body > header > nav ul{
+.sticky-header > nav ul{
     display:flex;
     font-size: 1.3em;
 }
-body > header > nav ul li:not(:last-of-type){
+.sticky-header > nav ul li:not(:last-of-type){
     margin-right:var(--spacer); 
 }
 /**** about *******/
@@ -177,4 +184,11 @@ footer{
 }
 footer  a:nth-last-of-type(even){
     margin:0 var(--spacer);
+}
+
+/* background animation */
+#canvas {
+    position: fixed;
+    top:0;
+    left:0;
 }
