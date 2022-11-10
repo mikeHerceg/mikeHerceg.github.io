@@ -1,4 +1,5 @@
 import * as Three from 'three';
+import galaxy from '../assets/galaxy-bg.jpg';
 
 export const setupThreeJS = () =>{
     // Camera & Canvas
@@ -6,6 +7,8 @@ export const setupThreeJS = () =>{
     if (!canvas) return;
     console.log(canvas)
     const scene =  new Three.Scene();
+    scene.background = new Three.TextureLoader().load(galaxy);
+
     const camera = new Three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer =  new Three.WebGLRenderer({
         canvas,
@@ -29,7 +32,6 @@ export const setupThreeJS = () =>{
     // Items
 
     const addStar = (color:number) => {
-        console.log(color)
         const geo = new Three.SphereGeometry(.25,24,24);
         const mat =  new Three.MeshStandardMaterial({color});
         const star = new Three.Mesh(geo, mat);
@@ -38,24 +40,20 @@ export const setupThreeJS = () =>{
         star.position.set(x,y,z);
         scene.add(star)
     }
-    Array(400).fill(null).forEach((item,i)=>{
-        console.log(i)
-          if( i % 2  === 0){
-            return addStar(0xffffff);
-          } 
-          if( i % 5  === 0){
-            return addStar(0xfaf1b5);
-          }
-            addStar(0xb5f6fa);   
-    });
+
+    Array(400).fill(null).forEach(()=>addStar(0xffffff));
     
+   
     //Actions
+
+    const moveCamera = ()=>{
+        const t = document.body.getBoundingClientRect().top;
+        camera.position.z = t * -0.05;
+    }
+    document.body.onscroll = moveCamera;
 
     const animate = () =>{
         requestAnimationFrame( animate );
-
-       
-
         renderer.render(scene, camera);
     }
     animate();
