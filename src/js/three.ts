@@ -1,5 +1,5 @@
 import * as Three from 'three';
-import galaxy from '../assets/galaxy-bg.jpg';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export const setupThreeJS = () =>{
     // Camera & Canvas
@@ -7,12 +7,12 @@ export const setupThreeJS = () =>{
     if (!canvas) return;
     console.log(canvas)
     const scene =  new Three.Scene();
-    scene.background = new Three.TextureLoader().load(galaxy);
+    scene.background = null 
 
     const camera = new Three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer =  new Three.WebGLRenderer({
         canvas,
-    
+        alpha: true
     });
 
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -24,7 +24,7 @@ export const setupThreeJS = () =>{
     // Lights
 
     const pointLight = new Three.PointLight(0xffffff);
-    pointLight.position.set(5, 5, 5);
+    pointLight.position.set(20, 20, 30);
 
     const ambientLight = new Three.AmbientLight(0xffffff);
     scene.add(pointLight, ambientLight);
@@ -41,10 +41,14 @@ export const setupThreeJS = () =>{
         scene.add(star)
     }
 
-    Array(400).fill(null).forEach(()=>addStar(0xffffff));
+    Array(400).fill(null).forEach(()=>addStar(0x20ba93));
     
    
     //Actions
+    //const controls = new OrbitControls(camera, renderer.domElement);
+    // const lightHelper = new Three.PointLightHelper(pointLight)
+    // const gridHelper = new Three.GridHelper(200, 50);
+    // scene.add(lightHelper, gridHelper);
 
     const moveCamera = ()=>{
         const t = document.body.getBoundingClientRect().top;
@@ -54,6 +58,7 @@ export const setupThreeJS = () =>{
 
     const animate = () =>{
         requestAnimationFrame( animate );
+        //controls.update();
         renderer.render(scene, camera);
     }
     animate();

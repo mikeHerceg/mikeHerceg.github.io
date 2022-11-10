@@ -12,7 +12,6 @@ body{
     height: 100vh;
 }
 #content {
-   
     height:auto;
     position: absolute;
     top:0;
@@ -196,4 +195,8 @@ footer  a:nth-last-of-type(even){
     position: fixed;
     top:0;
     left:0;
+    background-size: cover;
+    width: 100vw;
+    height:100vh;
+    background-image: url('./images/galaxy-bg.jpg');
 }

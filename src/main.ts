@@ -5,9 +5,9 @@ import {
 } from './js/functions';
 import { setupThreeJS } from './js/three';
 
-console.log('Thanks for checking out my log.');
+setupThreeJS();
 
 addEventsHandlers();
 adjustBodyForNav();
-setupThreeJS();
+console.log('Thanks for checking out my log.');
 window.addEventListener('resize',setupThreeJS);
