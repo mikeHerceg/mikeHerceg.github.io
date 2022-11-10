@@ -3,7 +3,6 @@
 
 #content {
     color:var(--black);
-    background:var(--black);
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-size: 18px;
     line-height: 32px;
@@ -188,6 +187,9 @@ footer  a:nth-last-of-type(even){
 
 /* background animation */
 #canvas {
+    background:var(--black);
+    width: 100vw;
+    height:100vh;
     position: fixed;
     top:0;
     left:0;
