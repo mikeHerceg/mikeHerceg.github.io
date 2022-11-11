@@ -9,5 +9,6 @@ setupThreeJS();
 
 addEventsHandlers();
 adjustBodyForNav();
+
 console.log('Thanks for checking out my log.');
 window.addEventListener('resize',setupThreeJS);
